@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}AI & Citizen — LILY AI Safety Alliance{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-badge" data-i18n="citizen_badge">Digital Safety Guide</span>
+    <h1 class="page-title" data-i18n="citizen_title">AI &amp; Citizen</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="section-desc" data-i18n="citizen_desc">
+      A practical guide for everyone — especially women, mothers, and caregivers — to navigate the digital world safely.
+    </p>
+
+    <!-- Guides -->
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3 data-i18n="guide1_title">AI Basics for Everyone</h3>
+        <p data-i18n="guide1_desc">A short video guide (coming soon via NotebookLM) covering the main notions about AI for people without access to this material.</p>
+        <span class="coming-soon-tag">Coming Soon</span>
+      </div>
+      <div class="card">
+        <div class="card-icon">👩‍👧</div>
+        <h3 data-i18n="guide2_title">Guide for Mothers &amp; Children</h3>
+        <p data-i18n="guide2_desc">Protections required for minors online, countries where AI is restricted for children, and the impact of screen time on child development.</p>
+        <span class="coming-soon-tag">Coming Soon</span>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3 data-i18n="guide3_title">Digital Resilience</h3>
+        <p data-i18n="guide3_desc">How to protect yourself online, identify disinformation, and report abuse. Practical tips for everyday digital safety.</p>
+        <span class="coming-soon-tag">Coming Soon</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Redlines -->
+    <div class="citizen-section">
+      <h2 class="section-title" data-i18n="redlines_title">International Redlines</h2>
+      <p data-i18n="redlines_desc">Emergency contacts and reporting channels for cybercrimes against women and children, by country.</p>
+
+      <div class="redlines-grid">
+        <div class="redline-card">
+          <span class="flag">🇧🇷</span>
+          <h4>Brazil</h4>
+          <ul>
+            <li><strong>SaferNet:</strong> <a href="https://www.safernet.org.br" target="_blank">safernet.org.br</a> — Hotline: 0800 061 8117</li>
+            <li><strong>Ligue 180</strong> — Central de Atendimento à Mulher</li>
+            <li><strong>Disque 100</strong> — Direitos Humanos (crianças)</li>
+          </ul>
+        </div>
+        <div class="redline-card">
+          <span class="flag">🇺🇸</span>
+          <h4>United States</h4>
+          <ul>
+            <li><strong>NCMEC:</strong> <a href="https://www.missingkids.org" target="_blank">missingkids.org</a> — 1-800-843-5678</li>
+            <li><strong>Cyber Civil Rights Initiative:</strong> <a href="https://cybercivilrights.org" target="_blank">cybercivilrights.org</a></li>
+          </ul>
+        </div>
+        <div class="redline-card">
+          <span class="flag">🇪🇺</span>
+          <h4>European Union</h4>
+          <ul>
+            <li><strong>INHOPE:</strong> <a href="https://www.inhope.org" target="_blank">inhope.org</a> — Global hotline network</li>
+            <li><strong>eNACSO:</strong> <a href="https://enacso.eu" target="_blank">enacso.eu</a> — Child safety online</li>
+          </ul>
+        </div>
+        <div class="redline-card add-card">
+          <span class="flag">➕</span>
+          <h4 data-i18n="redlines_note">This section is being compiled. If you know of official resources in your country, please contact us.</h4>
+          <a href="/contact" class="btn btn-ghost" style="margin-top:1rem;font-size:13px;" data-i18n="btn_contact">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Psychological support -->
+    <div class="citizen-section">
+      <h2 class="section-title" data-i18n="support_title">Free Psychological Support</h2>
+      <p data-i18n="support_desc">NGOs and social projects offering free or low-cost psychological support in various countries for survivors of digital violence.</p>
+      <div class="support-placeholder">
+        <span>🌍</span>
+        <p data-i18n="support_note">Directory under construction. We are mapping qualified organizations globally.</p>
+        <a href="/contact" class="btn btn-primary" data-i18n="btn_contact">Suggest an Organization</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

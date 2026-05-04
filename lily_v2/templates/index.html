@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}LILY AI Safety Alliance{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-bg">
+    <div class="grid-lines"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  <div class="hero-inner">
+    <span class="hero-badge" data-i18n="hero_badge">AI Safety Research Group</span>
+    <h1 class="hero-title">
+      <span data-i18n="hero_title_1">Protecting</span><br/>
+      <em data-i18n="hero_title_2">women &amp; children</em><br/>
+      <span data-i18n="hero_title_3">in the digital world</span>
+    </h1>
+    <p class="hero-desc" data-i18n="hero_desc">
+      LILY AI Safety Alliance is a research group dedicated to fighting algorithmic violence, promoting gender equity in AI leadership, and building a safer digital future for all.
+    </p>
+    <div class="hero-actions">
+      <a href="/about" class="btn btn-primary" data-i18n="btn_learn">Learn About Us</a>
+      <a href="/contact" class="btn btn-ghost" data-i18n="btn_contact">Get in Touch</a>
+    </div>
+    <!-- 50/50 banner -->
+    <div class="equity-banner">
+      <span class="equity-icon">⚡</span>
+      <span>Goal: <strong>50% women</strong> in technical &amp; leadership AI roles worldwide</span>
+    </div>
+  </div>
+</section>
+
+<section class="section pillars">
+  <div class="container">
+    <h2 class="section-title" data-i18n="pillars_title">Our Focus Areas</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">◈</div>
+        <h3 data-i18n="card1_title">Algorithmic Safety</h3>
+        <p data-i18n="card1_desc">We develop governance frameworks to identify and neutralize content that harms women and children in AI systems.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">◎</div>
+        <h3 data-i18n="card2_title">Gender Equity in AI</h3>
+        <p data-i18n="card2_desc">We advocate for at least 50% women in technical and leadership roles across the AI industry.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⬡</div>
+        <h3 data-i18n="card3_title">Digital Literacy</h3>
+        <p data-i18n="card3_desc">We promote global programs in cognitive resilience and digital education as preventive governance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seals preview -->
+<section class="section seals-preview">
+  <div class="container">
+    <h2 class="section-title" data-i18n="nav_seals">LILY Seals</h2>
+    <p class="section-desc">Recognizing AI companies committed to safety and gender equity.</p>
+    <div class="seals-row">
+      <a href="/seals" class="seal-preview-card bronze">
+        <div class="seal-medal">🥉</div>
+        <span data-i18n="bronze_name">Bronze</span>
+      </a>
+      <a href="/seals" class="seal-preview-card silver">
+        <div class="seal-medal">🥈</div>
+        <span data-i18n="silver_name">Silver</span>
+      </a>
+      <a href="/seals" class="seal-preview-card gold">
+        <div class="seal-medal">🥇</div>
+        <span data-i18n="gold_name">Gold</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <h2 data-i18n="cta_title">Want to collaborate?</h2>
+      <p data-i18n="cta_desc">We are open to researchers, students and AI Safety enthusiasts. Let's build together.</p>
+      <a href="/contact" class="btn btn-primary" data-i18n="btn_join">Join Us</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

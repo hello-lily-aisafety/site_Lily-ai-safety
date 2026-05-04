@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block title %}LILY Seals — LILY AI Safety Alliance{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-badge" data-i18n="seals_badge">Certification Program</span>
+    <h1 class="page-title" data-i18n="seals_title">LILY Safety Seals</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="section-desc" data-i18n="seals_desc">
+      Our certification framework recognizes AI companies committed to safety, gender equity, and the protection of women and children. Click each seal to learn more.
+    </p>
+
+    <!-- Seals accordion -->
+    <div class="seals-accordion">
+
+      <!-- BRONZE -->
+      <div class="seal-item" id="seal-bronze">
+        <button class="seal-header bronze-header" onclick="toggleSeal('bronze')">
+          <div class="seal-header-left">
+            <span class="seal-emoji">🥉</span>
+            <div>
+              <span class="seal-level" data-i18n="bronze_name">Bronze</span>
+              <span class="seal-designation" data-i18n="bronze_designation">Adhesion &amp; Manifesto</span>
+            </div>
+          </div>
+          <div class="seal-header-right">
+            <span class="seal-target" data-i18n="bronze_target">Startups / Early Stage</span>
+            <span class="seal-arrow" id="arrow-bronze">▼</span>
+          </div>
+        </button>
+        <div class="seal-body" id="body-bronze">
+          <h4>Requirements</h4>
+          <p data-i18n="bronze_req">Public declaration of zero-tolerance for misogyny in Terms of Use; Commitment to 1 internal training session per year.</p>
+          <div class="seal-qr-note">
+            <span>◈</span> Each certified company receives a unique QR Code linking to their validation page on the LILY website.
+          </div>
+        </div>
+      </div>
+
+      <!-- SILVER -->
+      <div class="seal-item" id="seal-silver">
+        <button class="seal-header silver-header" onclick="toggleSeal('silver')">
+          <div class="seal-header-left">
+            <span class="seal-emoji">🥈</span>
+            <div>
+              <span class="seal-level" data-i18n="silver_name">Silver</span>
+              <span class="seal-designation" data-i18n="silver_designation">Operational Transparency</span>
+            </div>
+          </div>
+          <div class="seal-header-right">
+            <span class="seal-target" data-i18n="silver_target">Mid-size AI Labs</span>
+            <span class="seal-arrow" id="arrow-silver">▼</span>
+          </div>
+        </button>
+        <div class="seal-body" id="body-silver">
+          <h4>Requirements</h4>
+          <p data-i18n="silver_req">All Bronze requirements + Active human supervision reports; Transparency on data filtering methods; Active Listening Channel for LILY reports.</p>
+          <div class="seal-qr-note">
+            <span>◈</span> Each certified company receives a unique QR Code linking to their validation page on the LILY website.
+          </div>
+        </div>
+      </div>
+
+      <!-- GOLD -->
+      <div class="seal-item" id="seal-gold">
+        <button class="seal-header gold-header" onclick="toggleSeal('gold')">
+          <div class="seal-header-left">
+            <span class="seal-emoji">🥇</span>
+            <div>
+              <span class="seal-level" data-i18n="gold_name">Gold</span>
+              <span class="seal-designation" data-i18n="gold_designation">Safety Excellence</span>
+            </div>
+          </div>
+          <div class="seal-header-right">
+            <span class="seal-target" data-i18n="gold_target">Big Tech / LLM Providers</span>
+            <span class="seal-arrow" id="arrow-gold">▼</span>
+          </div>
+        </button>
+        <div class="seal-body" id="body-gold">
+          <h4>Requirements</h4>
+          <p data-i18n="gold_req">All Silver requirements + Mandatory Red Teaming focused on gender bias; Support for external workshops; Direct API access for LILY technical audits.</p>
+          <div class="seal-qr-note">
+            <span>◈</span> Each certified company receives a unique QR Code linking to their validation page on the LILY website.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Eligibility & Pillars -->
+    <div class="seal-info-grid">
+      <div class="seal-info-box">
+        <h3 data-i18n="seal_eligibility_title">Core Eligibility</h3>
+        <p data-i18n="seal_eligibility">All applicants must have an absolute zero-tolerance policy for content promoting dehumanizing narratives against women and girls, as defined by International Human Rights and Equity standards.</p>
+      </div>
+      <div class="seal-info-box">
+        <h3 data-i18n="seal_pillars_title">Strategic Pillars</h3>
+        <ul class="styled-list">
+          <li data-i18n="pillar1">Human-in-the-Loop: Verifiable human oversight to mitigate hate speech.</li>
+          <li data-i18n="pillar2">Data Literacy Commitment: Internal workshops on identifying subtle misogyny in language models.</li>
+          <li data-i18n="pillar3">Active Feedback Loop: Commitment to reviewing and rectifying failures reported by LILY.</li>
+          <li data-i18n="pillar4">QR Code Verification: Every seal features a unique QR Code linking to a validation page.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleSeal(id) {
+  const body = document.getElementById('body-' + id);
+  const arrow = document.getElementById('arrow-' + id);
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.seal-body').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.seal-arrow').forEach(a => a.textContent = '▼');
+  if (!isOpen) {
+    body.classList.add('open');
+    arrow.textContent = '▲';
+  }
+}
+</script>
+{% endblock %}
